@@ -565,7 +565,7 @@ p {
 }
 
 .new-feature-img {
-    width: 300px;/ 
+    width: 300px;
     height: auto;
     cursor: pointer; /* Ensures the image looks clickable */
     transition: transform 0.2s ease; /* Smooth hover effect */
