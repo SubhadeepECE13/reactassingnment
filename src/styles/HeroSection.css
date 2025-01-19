@@ -1,0 +1,899 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5733;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 900px;
+}
+.center-container {
+    display: flex; /* Enables flexbox for centering */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width of the container */
+}
+
+.textmedium {
+    font-family: Inter;
+    color: #475467;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center; /* Ensures the text itself is centered */
+}
+.parent-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: calc(100vh - margin - padding); /* Adjust height to exclude external margins/paddings */
+    margin: 0; /* Removes any unintended top/bottom margins */
+    padding: 0; /* Removes unintended padding */
+    box-sizing: border-box; /* Ensures padding/border don't affect height calculation */
+}
+.faq-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+    justify-content: center; /* Centers everything vertically */
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+    padding: 40px;
+    border-radius: 20px; /* Rounded corners */
+    max-width: 600px;
+    margin: 50px auto; /* Center horizontally with some vertical spacing */
+   
+  }
+ /* ... previous CSS remains the same ... */
+
+/* Blog Section */
+.blog-section {
+    padding: 96px 0;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 64px;
+  }
+  
+  .blog-header-content {
+    max-width: 768px;
+    align-items:left;
+  }
+  
+  .blog-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #E63F3A;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+  
+  .blog-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #101828;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .blog-subtitle {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #475467;
+    text-align: left;
+  }
+  
+  .view-all-posts {
+    padding: 12px 20px;
+    background: #E63F3A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .view-all-posts:hover {
+    background: #D63631;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .blog-card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+  
+  .blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .blog-card-content {
+    padding: 24px;
+  }
+  
+  .blog-card-category {
+    font-size: 14px;
+    font-weight: 600;
+    color: #E63F3A;
+    margin-bottom: 12px;
+  }
+  
+  .blog-card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #101828;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .arrow-icon {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .blog-card:hover .arrow-icon {
+    opacity: 1;
+  }
+  
+  .blog-card-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #475467;
+    margin-bottom: 24px;
+  }
+  
+  .blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .blog-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .author-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .author-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #101828;
+  }
+  
+  .blog-date {
+    font-size: 14px;
+    color: #667085;
+  }
+  
+  @media (max-width: 1024px) {
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-header {
+      flex-direction: column;
+      gap: 24px;
+    }
+  
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .view-all-posts {
+      width: 100%;
+    }
+  }
+  
+  /* ... rest of the CSS remains the same ... */
+  
+
+ 
+ 
+  
+  .free-trial-heading {
+    font-family: Inter, sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+    color: #101828;
+    margin-bottom: 24px;
+  }
+  
+  .free-trial-subheading {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #475467;
+    margin-bottom: 40px;
+  }
+  
+  .free-trial-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  
+  .learn-more-btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background: #FFFFFF;
+    color: #344054;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background: #F9FAFB;
+  }
+  
+  .get-started-btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #E63F3A;
+    color: #FFFFFF;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .get-started-btn:hover {
+    background: #D63631;
+  }
+  
+  /* Keep all existing styles below */
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  
+  .author {
+    font-weight: 600;
+  }
+  
+  .date {
+    color: #888;
+  }
+  
+  .view-all-posts-btn {
+    background-color: #e63f3a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto 0;
+  }
+  
+  .view-all-posts-btn:hover {
+    background-color: #cc4a4a;
+  }
+  
+  
+  .author {
+    font-weight: 600;
+  }
+  
+  .date {
+    color: #888;
+  }
+  
+  .view-all-posts-btn {
+    background-color: #e65c5c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto 0;
+  }
+  
+  .view-all-posts-btn:hover {
+    background-color: #cc4a4a;
+  }
+  
+  
+  .faq-avatars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 10px; /* Adds space between the avatars */
+    transform: translateX(-20px); /* Moves the avatar a little left */
+  }
+  
+  
+  .parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .textmedium {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .textu {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: #555; /* Gray color for the text */
+    margin-bottom: 20px;
+  }
+  
+  .faq-button {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #E63F3A; /* Red button color */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-button {
+    background-color: #E63F3A;
+     /* Darker red on hover */
+  }
+  
+
+
+
+.nav-links li {
+    cursor: pointer;
+    color: #333;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.logo-image {
+    /* border-radius: 10%; */
+    width: 90px;
+    height: 40px;
+}
+
+
+/* Hero Content */
+.hero-content {
+    margin-top: 2rem;
+    height: 50%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.demo-btn,
+.signup-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.demo-btn:hover {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 108px;
+    margin-top: 15px;
+}
+
+
+.signup-btn{
+    background-color: #ff5733;
+    color: white;
+    border-radius: 108px;
+}
+
+/* Hero Card */
+.hero-card {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-left {
+    text-align: left;
+    flex: 1;
+}
+
+.card-left h3 {
+    margin-bottom: 0.5rem;
+}
+
+.options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.option {
+    padding: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.option.student {
+    background-color: #eee;
+}
+
+.option.professional {
+    background-color: #f8f9fa;
+}
+
+.card-right {
+    flex: 1;
+}
+
+.chat {
+    text-align: left;
+}
+
+.bot-message,
+.user-message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.bot-message {
+    background-color: #eee;
+}
+
+.user-message {
+    background-color: #d1e7dd;
+    text-align: right;
+}
+
+.new-feature-img {
+    width: 300px;/ 
+    height: auto;
+    cursor: pointer; /* Ensures the image looks clickable */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.image1 {
+    display: flex; /* Centers the image within the div */
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+    margin: 2rem auto; /* Adds more spacing around the container */
+    width: 100%; /* Ensures the container spans full width */
+}
+
+.image1 img {
+    width: 80%; /* Image takes up 80% of the container width */
+    max-width: 1200px; /* Optional: Restricts the maximum width */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 15px; /* Adds slightly rounded corners */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Adds a stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+}
+
+.image1 img:hover {
+    transform: scale(1.1); /* Enlarges the image more on hover */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Deepens the shadow on hover */
+    cursor: pointer; /* Makes it clear the image is interactive */
+}
+
+.socialproof {
+    display: flex; /* Centers the image within the div */
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+    margin: 2rem auto; /* Adds more spacing around the container */
+    width: 100%; /* Ensures the container spans full width */
+}
+.feature {
+    display: flex; /* Centers the image within the div */
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+    margin: 2rem auto; /* Adds more spacing around the container */
+    width: 100%; /* Ensures the container spans full width */
+}
+.testimonal{
+    display: flex; /* Centers the image within the div */
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+    /* Adds more spacing around the container */
+    width: 100%; /* Ensures the container spans full width */
+}
+.container{
+    display: flex; /* Centers the image within the div */
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+    /* Adds more spacing around the container */
+    width: 100%; /* Ensures the container spans full width */
+}
+.avatar {
+    display: flex;
+    justify-content: center; /* Centers the avatar horizontally */
+    align-items: center; /* Centers the avatar vertically */
+     margin-left: 20%;
+    width:40%; /* Adjust width for proper sizing */
+    height:90%; /* Adjust height for proper sizing */
+    
+  }
+
+/* FAQ Section */
+.faq-section {
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #1f2937;
+}
+
+.faq-question span {
+    flex-grow: 1;
+}
+
+.faq-toggle-btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1f2937;
+    border: 2px solid #98A2B3;
+    border-radius: 50%; /* Makes it circular */
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    top: 2px;
+    left: 2px;
+    gap: 0px;
+    opacity: 1;
+}
+
+.faq-toggle-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 2px;
+    background-color: #98A2B3;
+}
+
+.faq-toggle-btn.plus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 12px;
+    background-color: #98A2B3;
+}
+
+.faq-item.active .faq-toggle-btn::after {
+    display: none; /* Removes the vertical bar to create the "−" sign */
+}
+.textmedium {
+    width: 1024px;
+    height: 72px;
+    gap: 0px;
+    opacity: 0px;
+    text-align: center;
+    margin: 0 auto; /* This centers horizontally */
+    display: flex;
+    justify-content: center; /* This centers content horizontally within the element */
+    align-items: center; /* This centers content vertically within the element */
+}
+
+.text-lg-medium {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align:left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.faq-answer {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+.faq-item.active .faq-question {
+    color: #2563eb;
+}
+/* Basic navigation styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown .dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 100%; /* Position dropdown below the list item */
+    left: 0;
+    background-color: #f1f1f1;
+    padding: 10px;
+    list-style: none;
+    width: 150px; /* Adjust width of the dropdown */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown on hover */
+  }
+  
+  /* Dropdown icon rotation */
+  .dropdown.open .dropdown-icon {
+    transform: rotate(180deg); /* Rotate the icon when dropdown is open */
+  }
+  
+  .dropdown-icon {
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth rotation */
+  }
+  
+  /* Style for menu items */
+  .dropdown-menu li {
+    padding: 8px 0;
+    cursor: pointer;
+  }
+  .footer {
+    background-color: #ffffff;
+    padding: 64px 0;
+    border-top: 1px solid #EAECF0;
+  }
+  
+  .footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+  
+  .footer-column h3 {
+    color: #667085;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column li {
+    color: #475467;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-column li:hover {
+    color: #101828;
+  }
+  
+  .new-badge {
+    background-color: #ECFDF3;
+    color: #027A48;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 16px;
+    margin-left: 8px;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    border-top: 1px solid #EAECF0;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .logo-icon {
+    color: #E63F3A;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-logo span {
+    color: #101828;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .copyright {
+    color: #667085;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Keep all existing styles */
